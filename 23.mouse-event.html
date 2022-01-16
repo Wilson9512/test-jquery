@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<button class="btn btn-warning">按按</button>
+<input type="checkbox"/>
+
+<h1>Hello World</h1>
+
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    $(".btn").click(function () {
+        console.log("YO");
+        $("h1").css("color", "purple");
+    });
+
+    $(".btn").dblclick(function () {
+        console.log("dblclick");
+    });
+
+    $(".btn").mousedown(function () {
+        console.log("mousedown");
+    });
+
+    $(".btn").mouseup(function () {
+        console.log("mouseup");
+    });
+
+    $(".btn").contextmenu(function () {
+        console.log("contextmenu");
+    });
+
+    // $(".btn").mouseenter(function () {
+    //         console.log("mouseenter");
+    //     $("h1").css("color", "purple");
+    //
+    //     });
+
+    // $(".btn").mouseleave(function () {
+    //         console.log("mouseleave");
+    //     $("h1").css("color", "black");
+    //
+    //     });
+
+    //hover是進加出, 寫兩個func在裡面可以設定滑進跟滑出
+    $(".btn").hover(function () {
+        $("h1").css("color", "purple");
+    }, function () {
+        $("h1").css("color", "black");
+    });
+
+    $("input").click(function () {
+        console.log("input clicked");
+        $("h1").css("color", "black");
+    });
+
+</script>
+
+</html>

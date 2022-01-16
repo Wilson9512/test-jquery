@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>siblings</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<ul class="first">
+    <li class="a1">list item 1</li>
+    <li>list item 2</li>
+    <li class="a2">list item 3</li>
+</ul>
+<ul class="second">
+    <li class="b1">list item 1</li>
+    <li>list item 2</li>
+    <li class="b2">list item 3</li>
+</ul>
+
+
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+$("ul.first")
+    .find(".a1").css("outline","1px solid red")
+    .end()//可以回去很多次
+    .next().find('.b1').css("outline","1px solid red");
+
+</script>
+
+</html>

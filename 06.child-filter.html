@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+</head>
+<style>
+
+    .wrap{
+        width: 800px;
+        height: 200px;
+        background-color: #ccc;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box{
+        width: 75px;
+        height: 75px;outline: 1px solid red;
+    }
+
+    h3{
+        width: 60px;
+        height: 35px;
+    }
+</style>
+<body>
+
+<div class="wrap">
+    <p>p1</p>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <p>p2</p>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+    <p>p3</p>
+    <div class="box">box7</div>
+    <div class="box">box8</div>
+    <div class="box">box9</div>
+    <p>p4</p>
+    <h3>選我</h3>
+    <div class="box">box10</div>
+    <div class="box">box11</div>
+    <div class="box">box12</div>
+</div>
+
+<div class="wrap">
+    <div class="box">box11</div>
+<!--    <p>選我</p>-->
+</div>
+
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    // $(".box:first-child").css("background", "red");
+    // $(".box:last-child").css("background", "purple");
+    // $(".box:first-of-type").css("background", "blue");
+    // $(".box:nth-child(4)").css("background", "blue");
+    //$(".wrap :nth-child(1)").css("background", "blue");//空格就是選子層
+    $("div:nth-child(3)").css("background", "blue");
+    // $(".box:nth-last-child(2)").css("background", "blue");
+    // $(".box:nth-last-child(2)").css("background", "blue");
+    // $("p:nth-of-type(3)").css("background", "blue");
+    // $("p:nth-last-of-type(1)").css("background", "blue");
+    // $("p:only-of-type").css("background", "purple");
+    $("div:only-child").css("background", "pink");
+
+</script>
+</body>
+</html>
