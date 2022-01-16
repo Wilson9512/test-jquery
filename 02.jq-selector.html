@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq selector</title>
+</head>
+<body>
+
+<button class="btn">Btn1</button>
+<button class="btn">Btn1</button>
+<button class="btn">Btn1</button>
+<button class="btn">Btn1</button>
+<button class="btn">Btn1</button>
+<button class="btn">Btn1</button>
+<button class="btn2">Btn1</button>
+<button class="btn2">Btn1</button>
+<button class="btn2">Btn1</button>
+<button class="btn2">Btn1</button>
+<button class="btn2">Btn1</button>
+<button class="btn2">Btn1</button>
+
+<div class="box">
+<div class="div1" style="width:80px;height:80px;display:none;background-color:grey;box-shadow:5px 5px 5px #383737;"></div>
+<br>
+<div class="div2" style="width:80px;height:80px;display:none;background-color:#358d35;box-shadow:5px 5px 5px #383737;"></div>
+<br>
+<div class="div3" style="width:80px;height:80px;display:none;background-color:#5ed5d9;box-shadow:5px 5px 5px #383737;"></div>
+</div>
+
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script>
+    $(".btn,.btn2").text("我是按鈕");
+    $(".btn2").click(function(){
+        $(".div1").fadeIn();
+        $(".div2").fadeIn("slow");
+        $(".div3").fadeIn(2500);
+    });
+</script>
+</body>
+
+</html>
