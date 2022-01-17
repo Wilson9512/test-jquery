@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scroll</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+    <style>
+        body{
+            width: 300vh;
+            height: 300vh;
+        }
+    </style>
+</head>
+<body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script>
+$(window).scroll(function (){
+    console.log('scrollTop',$(window).scrollTop());
+    console.log('scrollLeft',$(window).scrollLeft());
+    console.log('width',$(window).width());
+    console.log('height',$(window).height());
+    console.log('body width',$("body").width());
+    console.log('body height',$("body").height());
+});
+</script>
+</body>
+
+
+
+</html>

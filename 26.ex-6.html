@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form>
+            <div class="form-row">
+
+                <div class="form-group">
+                    <select name="city" id="city">
+                        <option value="0">基隆</option>
+                        <option value="1">台北</option>
+                        <option value="2">新北</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select name="district" id="district">
+                        <option value="0">七堵區</option>
+                        <option value="1">中正區</option>
+                        <option value="2">暖暖區</option>
+                    </select>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<button>click</button>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script>
+
+    let districtArray = [
+        ['七堵', '中正', '暖暖'],
+        ['中正', '大安', '信義'],
+        ['蘆洲', '三重', '新店'],
+    ];
+
+
+    //拿文字 .text()  JS 的 innerTEXT
+    //拿value .val() JS 的 value
+    //拿html  .html() JS 的 innerHTML
+
+    $("#city").change(function () {
+        console.log("city value", $("#city").val());
+        console.log("districtArray data :", districtArray[$("#city").val()]);
+        $("#district option").eq(0).text(districtArray[$("#city").val()][0] + "區");
+        $("#district option").eq(1).text(districtArray[$("#city").val()][1] + "區");
+        $("#district option").eq(2).text(districtArray[$("#city").val()][2] + "區");
+
+
+        // for(let i = 0; i < $("district option").length ; i++){
+        //
+        // }
+        //jq Foreach
+        $("#district option").each(function (index, value) {
+            // console.log("index", index);
+            // console.log("value", $(value));
+            $(value).text(districtArray[$("#city").val()][index] + "區")
+        });
+    });
+
+    $("button").click(function () {
+        console.log("btn clicked");
+    });
+</script>
+</body>
+
+</html>
