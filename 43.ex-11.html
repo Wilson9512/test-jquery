@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex11</title>
+    <link rel="stylesheet" href="./bootstrap-4.2.1-dist/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            height: 300vh;
+        }
+
+        .box {
+            height: calc(100vh - 50px);
+        }
+
+        .nav {
+            height: 50px;
+            outline: 1px solid red;
+        }
+
+        nav.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+<nav class="nav fixed">I'm nav</nav>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    const navTop = $(".nav").offset().top;
+
+    $(window).scroll(function () {
+        console.log("$(window).scrollTop()", $(window).scrollTop());
+        console.log("navTop", navTop);
+
+        if ($(window).scrollTop() >= navTop) {
+            console.log("hi");
+            $(".nav").addClass("fixed");
+        } else {
+            $(".nav").removeClass("fixed");
+        }
+    });
+
+
+</script>
+</body>
+
+
+</html>
