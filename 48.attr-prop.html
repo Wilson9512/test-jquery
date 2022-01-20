@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>標籤後面都是attr  現在有什麼特性狀態prop</title>
+</head>
+<body>
+
+<button id="getAttr">attr</button>
+<button id="rmAttr">rm attr</button>
+<button id="setAttr">set attr</button>
+<button id="getProp">get prop</button>
+<button id="setProp">set prop</button>
+<button id="rmProp">rm prop</button>
+<input type="checkbox" id="check1" />
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script>
+
+    $("#getAttr").click(function (){
+        console.log($("#check1").attr("checked"));
+    });
+
+    $("#rmAttr").click(function (){
+        $("#check1").removeAttr("checked");
+    });
+
+    $("#setAttr").click(function () {
+        $("#check1").attr("checked", true);
+    });
+
+    $("#getProp").click(function (){
+        console.log("prop:",$("#check1").prop("myProp123"));
+    });//用prop寫if才能確定使用者是否打勾
+
+    $("#setProp").click(function (){
+        // $("#check1").prop("disabled", true);
+        $("#check1").prop("myProp123", "hello");
+    });
+
+    $("#rmProp").click(function (){
+        // $("#check1").prop("disabled", true);
+        $("#check1").removeProp("myProp123");
+    });
+
+</script>
+</body>
+</html>
