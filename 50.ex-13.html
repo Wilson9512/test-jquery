@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex13</title>
+    <style>
+        .img-demo {
+            height: 600px;
+        }
+
+        .img-demo img{
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .img-wrap img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="img-demo">
+                <img src="./img/product1.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="img-wrap d-flex">
+                <img class="img-row" src="./img/product1.jpg" alt="">
+                <img class="img-row" src="./img/product2.jpg" alt="">
+                <img class="img-row" src="./img/product3.jpg" alt="">
+                <img class="img-row" src="./img/product4.jpg" alt="">
+                <img class="img-row" src="./img/product5.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script>
+    $("img-row img").click(function () {
+        const imgSrc = $(this).attr("src");
+        $(".img-demo img").attr("src", imgSrc);
+    });
+</script>
+</body>
+</html>>
